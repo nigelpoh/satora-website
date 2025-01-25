@@ -304,8 +304,10 @@
         const variantSelector = document.querySelector('[id^="variant-selects-"] select');
         if (variantSelector) {
           variantSelector.addEventListener('change', function(event) {
-            const selectedVariantId = event.target.value;
-            document.querySelector('#variant-now').textContent = selectedVariantId;
+            const selectedVariantVal = event.target.value;
+            const selectedVariantId = event.target.getAttribute("data-option-value-id")
+            document.querySelector('#variant-now').textContent = selectedVariantVal;
+            document.querySelector('#top_banner_input').value = selectedVariantId;
           });
         }
       });
@@ -347,6 +349,19 @@
               <span>{{ product.title | split: "]" | last | escape  }} - <span id = "variant-now">{{ product.selected_or_first_available_variant.title }}</span></span>
               <span>{{ product.price | money_with_currency }}</span>
             </div>
+            <form>
+            <input
+              type="hidden"
+              name="id"
+              id = "top_banner_input"
+              value="{{ product.selected_or_first_available_variant.id }}"
+              {% if product.selected_or_first_available_variant.available == false
+                or product.selected_or_first_available_variant == null
+              %}
+                disabled
+              {% endif %}
+              class="product-variant-id"
+            >
             <button
             id="ProductSubmitButton-Parent"
             type="submit"
@@ -370,6 +385,7 @@
             </span>
             {%- render 'loading-spinner' -%}
           </button>
+        </form>
           </div>
         </div>
       {% endif %}
