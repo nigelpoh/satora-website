@@ -341,7 +341,10 @@
               }
             });
             document.getElementById("ProductSubmitButton-Parent").addEventListener("click", () => {
-              document.querySelector('product-form').submit();
+              const productForm = document.querySelector('product-form');
+              if (productForm) {
+                productForm.querySelector('form').dispatchEvent(new Event('submit', { bubbles: true, cancelable: true }));
+              }
             })
           });
         </script>
