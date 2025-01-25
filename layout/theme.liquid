@@ -349,44 +349,43 @@
               <span>{{ product.title | split: "]" | last | escape  }} - <span id = "variant-now">{{ product.selected_or_first_available_variant.title }}</span></span>
               <span>{{ product.price | money_with_currency }}</span>
             </div>
-                <product-form
-                  class="product-form">
-            <input
-              type="hidden"
-              name="id"
-              id = "top_banner_input"
-              value="{{ product.selected_or_first_available_variant.id }}"
-              {% if product.selected_or_first_available_variant.available == false
-                or product.selected_or_first_available_variant == null
-              %}
-                disabled
-              {% endif %}
-              class="product-variant-id"
-            >
-            <button
-            id="ProductSubmitButton-Parent"
-            type="submit"
-            name="add"
-            class="product-form__submit button button--full-width button--primary"
-            {% if product.selected_or_first_available_variant.available == false
-              or product.selected_or_first_available_variant == null
-            %}
-              disabled
-            {% endif %}
-            style = "background-color:#BC5631;color:#FCFCFC"
-          >
-            <span>
-              {%- if product.selected_or_first_available_variant == null -%}
-                {{ 'products.product.unavailable' | t }}
-              {%- elsif product.selected_or_first_available_variant.available == false -%}
-                {{ 'products.product.sold_out' | t }}
-              {%- else -%}
-                {{ 'products.product.add_to_cart' | t }}
-              {%- endif -%}
-            </span>
-            {%- render 'loading-spinner' -%}
-          </button>
-                </product-form>
+            <product-form class="product-form">    
+              <input
+                type="hidden"
+                name="id"
+                id = "top_banner_input"
+                value="{{ product.selected_or_first_available_variant.id }}"
+                {% if product.selected_or_first_available_variant.available == false
+                  or product.selected_or_first_available_variant == null
+                %}
+                  disabled
+                {% endif %}
+                class="product-variant-id"
+              />
+                <button
+                id="ProductSubmitButton-Parent"
+                type="submit"
+                name="add"
+                class="product-form__submit button button--full-width button--primary"
+                {% if product.selected_or_first_available_variant.available == false
+                  or product.selected_or_first_available_variant == null
+                %}
+                  disabled
+                {% endif %}
+                style = "background-color:#BC5631;color:#FCFCFC"
+              >
+                <span>
+                  {%- if product.selected_or_first_available_variant == null -%}
+                    {{ 'products.product.unavailable' | t }}
+                  {%- elsif product.selected_or_first_available_variant.available == false -%}
+                    {{ 'products.product.sold_out' | t }}
+                  {%- else -%}
+                    {{ 'products.product.add_to_cart' | t }}
+                  {%- endif -%}
+                </span>
+                {%- render 'loading-spinner' -%}
+              </button>
+            </product-form>
           </div>
         </div>
       {% endif %}
