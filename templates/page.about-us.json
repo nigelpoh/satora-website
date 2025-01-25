@@ -11,13 +11,68 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "rich_text_MKmanb": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_EYGxg4": {
+          "type": "heading",
+          "settings": {
+            "heading": "About Us",
+            "heading_size": "h2"
+          }
+        }
+      },
+      "block_order": [
+        "heading_EYGxg4"
+      ],
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "image_with_text_pfM7Cx": {
+      "type": "image-with-text",
+      "blocks": {
+        "text_YGP3w4": {
+          "type": "text",
+          "settings": {
+            "text": "{{ page.content }}",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "text_YGP3w4"
+      ],
+      "settings": {
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "rich_text_MKmanb",
+    "image_with_text_pfM7Cx"
   ]
 }
