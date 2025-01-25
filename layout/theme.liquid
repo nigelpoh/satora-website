@@ -302,6 +302,7 @@
      <script>
       document.addEventListener('DOMContentLoaded', function() {
         const variantSelector = document.querySelector('input[name="id"]');
+        console.log(variantSelector)
         if (variantSelector) {
           variantSelector.addEventListener('change', function(event) {
             const selectedVariantId = event.target.value;
