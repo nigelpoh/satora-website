@@ -348,6 +348,8 @@
               loadingToEnable.classList.remove("hidden")
               if (productForm) {
                 productForm.querySelector('form').dispatchEvent(new Event('submit', { bubbles: true, cancelable: true }));
+                buttonToDisable.classList.remove("disabled")
+                loadingToEnable.classList.add("hidden")
               }
             })
           });
