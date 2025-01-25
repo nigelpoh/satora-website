@@ -404,7 +404,8 @@
     "custom_css": [
       ".button {font-size: 1.2rem; min-height: calc(3.5rem + var(--buttons-border-width) * 2); padding: 0rem 1.5rem;}",
       ".field__label {font-size: 1.2rem; top: calc(1.3rem + var(--inputs-border-width));}",
-      " /* Works on Chrome, Edge, and Safari */*::-webkit-scrollbar {-webkit-appearance: none; width: 5px; height: 5px; margin: 2rem 0;}",
+      " /* For Firefox */* {scrollbar-width: thin; scrollbar-color: #343231 #f2f0ef;}",
+      "/* Works on Chrome, Edge, and Safari */*::-webkit-scrollbar {-webkit-appearance: none; width: 5px; height: 5px; margin: 2rem 0;}",
       "*::-webkit-scrollbar-track {background: #f2f0ef;}",
       "*::-webkit-scrollbar-thumb {background-color: #343231;}"
     ]
