@@ -24,7 +24,7 @@
           "type": "heading",
           "settings": {
             "heading": "About Us",
-            "heading_size": "h2"
+            "heading_size": "h1"
           }
         }
       },
@@ -55,6 +55,7 @@
         "text_YGP3w4"
       ],
       "settings": {
+        "image": "shopify://shop_images/minimal_landing_shoot.webp",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
