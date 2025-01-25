@@ -59,6 +59,20 @@
       width:calc(100% - 9rem);
     }
   }
+  .product__media-list::-webkit-scrollbar {
+    height: 0rem;
+  }
+  .product__media-list::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .product__media-list::-webkit-scrollbar-thumb {
+    background-color: transparent;
+  } 
+  @supports not (selector(::-webkit-scrollbar)) {
+    .product__media-list {
+      scrollbar-width: none;
+    }
+  }
 </style>
 
 {% comment %}
