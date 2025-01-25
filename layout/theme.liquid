@@ -359,12 +359,14 @@
           });
         </script>
         <div id = "hidden-banner" style="display:none; flex-direction: row; justify-content: space-between; padding: 2em 4em; position: sticky; top: 0; left: 0; width: 100%; background-color: #FCFCFC; color: #103948; z-index:100">
-          <div style = "height: 9rem; width: 9rem;">
-              {{ product.featured_image | image_url: width: 400, height: 400| image_tag: style: "height: 9rem; width: 9rem;" }}
-          </div>
-          <div style = "display: flex; flex-direction: column">
-            <span>{{ product.title | split: "]" | last | escape  }} - <span id = "variant-now">{{ product.selected_or_first_available_variant.title }}</span></span>
-            <span>{{ product.price | money_with_currency }}</span>
+          <div>
+            <div style = "height: 7rem; width: 7rem;">
+                {{ product.featured_image | image_url: width: 400, height: 400| image_tag: style: "height: 7rem; width: 7rem;" }}
+            </div>
+            <div style = "display: flex; flex-direction: column">
+              <span>{{ product.title | split: "]" | last | escape  }} - <span id = "variant-now">{{ product.selected_or_first_available_variant.title }}</span></span>
+              <span>{{ product.price | money_with_currency }}</span>
+            </div>
           </div>
           <input
             type="hidden"
