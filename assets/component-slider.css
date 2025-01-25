@@ -224,13 +224,13 @@ slider-component.slider-component-full-width {
   /* scrollbar-width: none; */
 }
 
-.slider::-webkit-scrollbar {
+/* .slider::-webkit-scrollbar {
   height: 0.4rem;
   width: 0.4rem;
   display: none;
-}
+} */
 
-.slider::-webkit-scrollbar-thumb {
+/* .slider::-webkit-scrollbar-thumb {
   background-color: rgb(var(--color-foreground));
   border-radius: 0.4rem;
   border: 0;
@@ -239,7 +239,7 @@ slider-component.slider-component-full-width {
 .slider::-webkit-scrollbar-track {
   background: rgba(var(--color-foreground), 0.04);
   border-radius: 0.4rem;
-}
+} */
 
 .slider-counter {
   display: flex;
