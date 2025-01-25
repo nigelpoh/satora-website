@@ -11,6 +11,52 @@
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
+    "grid_icons_adprfB": {
+      "type": "grid-icons",
+      "blocks": {
+        "image_text_item_nbQbCn": {
+          "type": "image_text_item",
+          "settings": {
+            "image": "shopify://shop_images/shipping_0b708764-07c1-4df9-be30-b1b9af8d4218.svg",
+            "title": "Free Shipping Worldwide"
+          }
+        },
+        "image_text_item_xgteNB": {
+          "type": "image_text_item",
+          "settings": {
+            "image": "shopify://shop_images/secure_checkout.svg",
+            "title": "100% Secure Checkout"
+          }
+        },
+        "image_text_item_DPKCzV": {
+          "type": "image_text_item",
+          "settings": {
+            "image": "shopify://shop_images/returns_935b994f-26fb-40fd-b5ee-e2aeb29d5d2b.svg",
+            "title": "60 Days Returns"
+          }
+        },
+        "image_text_item_hYffeH": {
+          "type": "image_text_item",
+          "settings": {
+            "image": "shopify://shop_images/warranty.svg",
+            "title": "Up to 12 Months Warranty"
+          }
+        }
+      },
+      "block_order": [
+        "image_text_item_nbQbCn",
+        "image_text_item_xgteNB",
+        "image_text_item_DPKCzV",
+        "image_text_item_hYffeH"
+      ],
+      "settings": {
+        "mobile_columns": 2,
+        "desktop_columns": 4,
+        "section_title": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "footer": {
       "type": "footer",
       "blocks": {
@@ -59,6 +105,7 @@
     }
   },
   "order": [
+    "grid_icons_adprfB",
     "footer"
   ]
 }
