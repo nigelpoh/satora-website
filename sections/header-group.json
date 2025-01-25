@@ -23,7 +23,6 @@
         },
         "announcement_LeBJAb": {
           "type": "announcement",
-          "disabled": true,
           "settings": {
             "text": "Buy 2 Get 1 Free | 40% Off All Phone Cases",
             "link": ""
