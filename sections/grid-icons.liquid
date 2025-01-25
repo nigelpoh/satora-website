@@ -1,0 +1,132 @@
+<style>
+  .image-text-grid .grid {
+    display: grid;
+    gap: 20px;
+  }
+  .image-text-grid .grid-item {
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
+    text-align: center;
+  }
+  .image-text-grid img {
+    max-width: 100%;
+    height: auto;
+  }  
+  .grid {
+    grid-template-columns: repeat({{ section.settings.mobile_columns }}, 1fr);
+  }
+  @media screen and (min-width: 749px) {
+    .grid {
+      grid-template-columns: repeat({{ section.settings.desktop_columns }}, 1fr);
+    }
+  }
+</style>
+<section 
+  class="image-text-grid"
+  style = "margin-top:{{ section.settings.padding_top }}px;margin-bottom:{{ section.settings.padding_bottom }}px;padding: 0 4rem;"
+  >
+  <div class="container">
+    {% if section.settings.section_title != blank %}
+      <h2>{{ section.settings.section_title }}</h2>
+    {% endif %}
+    <div class="grid">
+      {% for block in section.blocks %}
+        <div class="grid-item" style = "line-height:normal;">
+          {% if block.settings.image != blank %}
+            <div style = "max-width:6rem">
+              {{
+                block.settings.image
+                | image_url: width: 416
+                | image_tag:
+                  loading: 'lazy',
+                  widths: '54, 74, 104, 162, 208, 324, 416',
+                  id: block.id,
+                  alt: block.settings.image.alt
+                | escape
+              }}
+            </div>
+          {% endif %}
+          {% if block.settings.title != blank %}
+            <span style = "font-size:1.2rem;letter-spacing:0;">{{ block.settings.title }}</span>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Features Grid",
+  "settings": [
+    {
+      "type": "range",
+      "id": "mobile_columns",
+      "label": "Number of Columns on Mobile",
+      "min": 1,
+      "max": 6,
+      "default": 2
+    },
+    {
+      "type": "range",
+      "id": "desktop_columns",
+      "label": "Number of Columns on Desktop",
+      "min": 1,
+      "max": 6,
+      "default": 4
+    },
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Section Title",
+      "default": "Features"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image_text_item",
+      "name": "Image and Text Item",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Sample Title"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image and Text Grid",
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,81 @@
+{% comment %}
+Usage
+  {%- render 'related-products',
+      id: block.id,
+      section: section,
+      color_scheme: block.settings.color_scheme,
+      columns_desktop: block.settings.columns_desktop,
+      columns_mobile: block.settings.columns_mobile,
+      heading_size: block.settings.heading_size,
+      heading: block.settings.heading,
+      image_shape: block.settings.image_shape,
+      image_ratio: block.settings.image_ratio,
+      show_secondary_image: block.settings.show_secondary_image,
+      show_vendor: block.settings.show_vendor,
+      show_rating: block.settings.show_rating,
+      products_to_show: block.settings.products_to_show,
+      padding_top: block.settings.padding_top,
+      padding_bottom: block.settings.padding_top
+  -%}
+{% endcomment %}
+
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+{{ 'component-price.css' | asset_url | stylesheet_tag }}
+{{ 'section-related-products.css' | asset_url | stylesheet_tag }}
+
+{% if image_shape == 'blob' %}
+  {{ 'mask-blobs.css' | asset_url | stylesheet_tag }}
+{%- endif -%}
+
+{%- style -%}
+  .block-{{ id }}-padding {
+    padding-top: {{ padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .block-{{ id }}-padding {
+      padding-top: {{ padding_top }}px;
+      padding-bottom: {{ padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="color-{{ color_scheme }} gradient">
+  <product-recommendations
+    class="related-products page-width block-{{ id }}-padding isolate{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+    data-url="{{ routes.product_recommendations_url }}?limit={{ products_to_show }}"
+    data-section-id="{{ section.id }}"
+    data-product-id="{{ product.id }}"
+  >
+    {% if recommendations.performed and recommendations.products_count > 0 %}
+      <h2 class="related-products__heading inline-richtext {{ heading_size }}" style = "font-style:italic;">
+        {{ heading }}
+      </h2>
+      <ul
+        class="grid product-grid grid--{{ columns_desktop }}-col-desktop grid--{{ columns_mobile }}-col-tablet-down"
+        role="list"
+        style = "flex-wrap:nowrap;overflow-x:scroll;overflow-y:hidden;padding-bottom: 2rem;"
+      >
+        {% assign skip_card_product_styles = false %}
+        {% for recommendation in recommendations.products %}
+          <li class="grid__item" style = "border: 1px solid rgba(var(--color-foreground),0.2);padding: 2rem 0;">
+            {% render 'card-product',
+              card_product: recommendation,
+              media_aspect_ratio: image_ratio,
+              image_shape: image_shape,
+              show_secondary_image: show_secondary_image,
+              show_vendor: show_vendor,
+              show_rating: show_rating,
+              skip_styles: skip_card_product_styles
+            %}
+          </li>
+          {%- assign skip_card_product_styles = true -%}
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </product-recommendations>
+  {% if image_shape == 'arch' %}
+    {{ 'mask-arch.svg' | inline_asset_content }}
+  {%- endif -%}
+</div>

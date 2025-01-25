@@ -1,0 +1,33 @@
+{% comment %}
+  Usage
+  {% render 'grid-icons', grid: block.settings.features, columns: block.settings.columns %}
+{% endcomment %}
+<style>
+    .image-text-grid-snippet .grid {
+      display: grid;
+      gap: 20px;
+    }
+    .image-text-grid-snippet .grid-item {
+      text-align: center;
+    }
+    .image-text-grid-snippet img {
+      max-width: 100%;
+      height: auto;
+    }
+</style>
+<div class="image-text-grid-snippet">
+  <div class="grid" style="grid-template-columns: repeat({{ columns }}, 1fr);">
+    {% for block in grid %}
+      <div class="grid-item" style = "line-height:1;">
+        {% if block.image != blank %}
+          <div style = "height:5rem;">
+            <img src="{{ block.image | file_url }}" alt="{{ block.title }}" width = 200 height = 200 style = "max-height:100%;"/>
+          </div>
+        {% endif %}
+        {% if block.title != blank %}
+          <span style = "font-size:1.1rem;letter-spacing:0;">{{ block.title }}</span>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+</div>
