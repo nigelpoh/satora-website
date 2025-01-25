@@ -349,7 +349,8 @@
               <span>{{ product.title | split: "]" | last | escape  }} - <span id = "variant-now">{{ product.selected_or_first_available_variant.title }}</span></span>
               <span>{{ product.price | money_with_currency }}</span>
             </div>
-            <form>
+                <product-form
+                  class="product-form">
             <input
               type="hidden"
               name="id"
@@ -385,7 +386,7 @@
             </span>
             {%- render 'loading-spinner' -%}
           </button>
-        </form>
+                </product-form>
           </div>
         </div>
       {% endif %}
