@@ -15,8 +15,8 @@
         "heading_ebRreh": {
           "type": "heading",
           "settings": {
-            "heading": "TRACK YOUR ORDER",
-            "heading_size": "h0"
+            "heading": "<em>Track Your Order</em>",
+            "heading_size": "h1"
           }
         },
         "text_ePk4xP": {
