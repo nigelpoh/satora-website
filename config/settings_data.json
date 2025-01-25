@@ -108,7 +108,8 @@
     "sale_badge_color_scheme": "scheme-3",
     "sold_out_badge_color_scheme": "scheme-3",
     "brand_headline": "",
-    "brand_description": "<p></p>",
+    "brand_description": "",
+    "brand_image": "shopify://shop_images/logo_colour.webp",
     "brand_image_width": 100,
     "social_facebook_link": "",
     "social_instagram_link": "",
@@ -404,10 +405,10 @@
     "custom_css": [
       ".button {font-size: 1.2rem; min-height: calc(3.5rem + var(--buttons-border-width) * 2); padding: 0rem 1.5rem;}",
       ".field__label {font-size: 1.2rem; top: calc(1.3rem + var(--inputs-border-width));}",
-      "/* For Chrome, Edge, and Safari */*::-webkit-scrollbar {-webkit-appearance: none; width: 5px; height: 5px; margin: 2rem 0;}",
+      " /* For Chrome, Edge, and Safari */*::-webkit-scrollbar {-webkit-appearance: none; width: 5px; height: 5px; margin: 2rem 0;}",
       "*::-webkit-scrollbar-track {background: #f2f0ef;}",
       "*::-webkit-scrollbar-thumb {background-color: #343231;}",
-      "/* For Firefox */@supports not (selector(::-webkit-scrollbar)) {* {scrollbar-width: thin; scrollbar-color: #343231 #f2f0ef; }}"
+      " /* For Firefox */@supports not (selector(::-webkit-scrollbar)) {* {scrollbar-width: thin; scrollbar-color: #343231 #f2f0ef; }}"
     ]
   }
 }
