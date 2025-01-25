@@ -74,11 +74,27 @@
             "heading": "Need Help?",
             "menu": "footer"
           }
+        },
+        "text_aiGwQD": {
+          "type": "text",
+          "settings": {
+            "heading": "",
+            "subtext": ""
+          }
+        },
+        "text_XVgj84": {
+          "type": "text",
+          "settings": {
+            "heading": "",
+            "subtext": ""
+          }
         }
       },
       "block_order": [
         "image_UPUKjL",
-        "link_list_P34dQk"
+        "link_list_P34dQk",
+        "text_aiGwQD",
+        "text_XVgj84"
       ],
       "settings": {
         "color_scheme": "scheme-2",
