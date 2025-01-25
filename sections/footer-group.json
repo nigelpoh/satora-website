@@ -74,20 +74,11 @@
             "heading": "Need Help?",
             "menu": "footer"
           }
-        },
-        "text_fwXag3": {
-          "type": "text",
-          "disabled": true,
-          "settings": {
-            "heading": "We Aim To",
-            "subtext": "<p>Inspire wanderlust, blending protection with artful designs that celebrate the world's beauty</p>"
-          }
         }
       },
       "block_order": [
         "image_UPUKjL",
-        "link_list_P34dQk",
-        "text_fwXag3"
+        "link_list_P34dQk"
       ],
       "settings": {
         "color_scheme": "scheme-2",
