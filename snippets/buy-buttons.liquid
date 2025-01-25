@@ -10,6 +10,32 @@
   Usage:
   {% render 'buy-buttons', block: block, product: product, product_form_id: product_form_id, section_id: section.id, show_pickup_availability: true %}
 {% endcomment %}
+
+<!-- <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const target = document.getElementById("target");
+    const hiddenElement = document.getElementById("hidden-element");
+  
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) {
+            hiddenElement.style.display = "block"; // Show the element
+          } else {
+            hiddenElement.style.display = "none"; // Hide the element
+          }
+        });
+      },
+      { threshold: 0.5 } // Adjust visibility threshold as needed
+    );
+  
+    observer.observe(target);
+  });
+
+</script> -->
+<div style = "position:absolute">
+  Pricing Placeholder
+</div>
 <div {{ block.shopify_attributes }}>
   {%- if product != blank -%}
     {%- liquid
