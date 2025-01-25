@@ -59,7 +59,7 @@ Usage
       >
         {% assign skip_card_product_styles = false %}
         {% for recommendation in recommendations.products %}
-          <li class="grid__item" style = "border: 1px solid rgba(var(--color-foreground),0.2);padding: 2rem 0;">
+          <li class="grid__item">
             {% render 'card-product',
               card_product: recommendation,
               media_aspect_ratio: image_ratio,
