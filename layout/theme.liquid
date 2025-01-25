@@ -343,7 +343,7 @@
             });
         </script>
         <div id = "hidden-banner" style="display:none; position: sticky; top: 0; left: 0; width: 100%; background-color: lightgreen; padding: 20px; text-align: center; z-index:100">
-          Pricing Placeholder {{ product.selected_or_first_available_variant.title }}
+          {{ product.title }} - <span id = "variant-now">{{ product.selected_or_first_available_variant }}</span>
         </div>
       {% endif %}
       {{ content_for_layout }}
