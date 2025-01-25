@@ -347,9 +347,13 @@
               buttonToDisable.classList.add("disabled")
               loadingToEnable.classList.remove("hidden")
               if (productForm) {
+                
+                productForm.addEventListener('formSubmissionCompleted', (event) => {
+                  buttonToDisable.classList.remove("disabled")
+                  loadingToEnable.classList.add("hidden")
+                });
+
                 productForm.querySelector('form').dispatchEvent(new Event('submit', { bubbles: true, cancelable: true }));
-                buttonToDisable.classList.remove("disabled")
-                loadingToEnable.classList.add("hidden")
               }
             })
           });
