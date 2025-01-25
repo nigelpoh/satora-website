@@ -11,10 +11,10 @@
   {% render 'buy-buttons', block: block, product: product, product_form_id: product_form_id, section_id: section.id, show_pickup_availability: true %}
 {% endcomment %}
 
-<!-- <script>
+<script>
   document.addEventListener("DOMContentLoaded", () => {
-    const target = document.getElementById("target");
-    const hiddenElement = document.getElementById("hidden-element");
+    const target = document.getElementById("buttons-target");
+    const hiddenElement = document.getElementById("hidden-banner");
   
     const observer = new IntersectionObserver(
       (entries) => {
@@ -32,11 +32,11 @@
     observer.observe(target);
   });
 
-</script> -->
-<div style="position: sticky; top: 0; left: 0; width: 100%; background-color: lightgreen; padding: 20px; text-align: center;">
+</script>
+<div id = "hidden-banner" style="position: sticky; top: 0; left: 0; width: 100%; background-color: lightgreen; padding: 20px; text-align: center; z-index:100">
   Pricing Placeholder
 </div>
-<div {{ block.shopify_attributes }}>
+<div {{ block.shopify_attributes }} id = "buttons-target">
   {%- if product != blank -%}
     {%- liquid
       assign gift_card_recipient_feature_active = false
