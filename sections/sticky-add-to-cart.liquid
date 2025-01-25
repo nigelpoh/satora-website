@@ -1,6 +1,42 @@
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const target = document.getElementById("buttons-target");
+    const hiddenElement = document.getElementById("hidden-banner");
+    const 
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) {
+            hiddenElement.style.display = "block"; // Show the element
+          } else {
+            hiddenElement.style.display = "none"; // Hide the element
+          }
+        });
+      },
+      { threshold: 0.5 } // Adjust visibility threshold as needed
+    );
+  
+    observer.observe(target);
+  });
+
+</script>
+<div id = "hidden-banner" style="display:none; position: sticky; top: 0; left: 0; width: 100%; background-color: lightgreen; padding: 20px; text-align: center; z-index:100">
+  Pricing Placeholder {{ product.title }}
+</div>
+
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
-  }
+  "name": "Sticky Add To Cart",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [],
+  "presets": [
+    {
+      "name": "Sticky Add To Cart",    
+    }
+  ]
+}
 {% endschema %}
