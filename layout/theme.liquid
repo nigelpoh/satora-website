@@ -364,7 +364,7 @@
                 {{ product.featured_image | image_url: width: 400, height: 400| image_tag: style: "height: 7rem; width: 7rem;" }}
             </div>
             <div style = "display: flex; flex-direction: column">
-              <h3 style = "font-style: italic;">{{ product.title | split: "]" | last | escape  }} - <span id = "variant-now">{{ product.selected_or_first_available_variant.title }}</span></h3>
+              <h3 style = "font-style: italic;margin:0;">{{ product.title | split: "]" | last | escape  }} - <span id = "variant-now">{{ product.selected_or_first_available_variant.title }}</span></h3>
               <span>{{ product.price | money_with_currency }}</span>
             </div>
           </div>
