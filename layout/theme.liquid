@@ -341,8 +341,36 @@
               });
             });
         </script>
-        <div id = "hidden-banner" style="display:none; position: sticky; top: 0; left: 0; width: 100%; background-color: #BC5631; color: #FCFCFC; padding: 20px; text-align: center; z-index:100">
-          {{ product.title }} - <span id = "variant-now">{{ product.selected_or_first_available_variant.title }}</span>
+        <div id = "hidden-banner" style="display:none; position: sticky; top: 0; left: 0; width: 100%; background-color: #FCFCFC; color: #103948; padding: 20px; text-align: center; z-index:100">
+          <div style = "display: flex; flex-direction: row;">
+            <div style = "display: flex; flex-direction: column">
+              <span>{{ product.title | split: "]" | last | escape  }} - <span id = "variant-now">{{ product.selected_or_first_available_variant.title }}</span></span>
+              <span>{{ product.price | money_with_currency }}</span>
+            </div>
+            <button
+            id="ProductSubmitButton-Parent"
+            type="submit"
+            name="add"
+            class="product-form__submit button button--full-width button--primary"
+            {% if product.selected_or_first_available_variant.available == false
+              or product.selected_or_first_available_variant == null
+            %}
+              disabled
+            {% endif %}
+            style = "background-color:#BC5631;color:#FCFCFC"
+          >
+            <span>
+              {%- if product.selected_or_first_available_variant == null -%}
+                {{ 'products.product.unavailable' | t }}
+              {%- elsif product.selected_or_first_available_variant.available == false -%}
+                {{ 'products.product.sold_out' | t }}
+              {%- else -%}
+                {{ 'products.product.add_to_cart' | t }}
+              {%- endif -%}
+            </span>
+            {%- render 'loading-spinner' -%}
+          </button>
+          </div>
         </div>
       {% endif %}
       {{ content_for_layout }}
