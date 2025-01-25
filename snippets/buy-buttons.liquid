@@ -15,7 +15,7 @@
   document.addEventListener("DOMContentLoaded", () => {
     const target = document.getElementById("buttons-target");
     const hiddenElement = document.getElementById("hidden-banner");
-  
+    const 
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -26,7 +26,7 @@
           }
         });
       },
-      { threshold: 0 } // Adjust visibility threshold as needed
+      { threshold: 1 } // Adjust visibility threshold as needed
     );
   
     observer.observe(target);
