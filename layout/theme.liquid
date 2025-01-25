@@ -300,7 +300,7 @@
       }
       document.addEventListener('DOMContentLoaded', function() {
         const variantSelector = document.querySelector('[id^="variant-selects-"] select');
-        console.log(variantSelector)
+        console.log("VS", variantSelector)
         if (variantSelector) {
           variantSelector.addEventListener('change', function(event) {
             const selectedVariantId = event.target.value;
