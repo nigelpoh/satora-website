@@ -358,7 +358,7 @@
             })
           });
         </script>
-        <div id = "hidden-banner" style="display:none; flex-direction: row; justify-content: space-between; padding: 0 2em; position: sticky; top: 0; left: 0; width: 100%; background-color: #FCFCFC; color: #103948; text-align: center; z-index:100">
+        <div id = "hidden-banner" style="display:none; flex-direction: row; justify-content: space-between; padding: 2em 4em; position: sticky; top: 0; left: 0; width: 100%; background-color: #FCFCFC; color: #103948; text-align: center; z-index:100">
           <div style = "display: flex; flex-direction: column">
             <span>{{ product.title | split: "]" | last | escape  }} - <span id = "variant-now">{{ product.selected_or_first_available_variant.title }}</span></span>
             <span>{{ product.price | money_with_currency }}</span>
