@@ -38,6 +38,7 @@
   }
 {%- endstyle -%}
 
+{% comment %}
 {%- liquid
   assign products_to_display = section.settings.collection.all_products_count
 
@@ -56,6 +57,19 @@
   if section.settings.enable_desktop_slider and products_to_display > section.settings.columns_desktop
     assign show_desktop_slider = true
   endif
+-%}
+{% endcomment %}
+
+{%- liquid
+  assign products_to_display = section.settings.collection.all_products_count
+
+  if section.settings.collection.all_products_count > section.settings.products_to_show
+    assign products_to_display = section.settings.products_to_show
+    assign more_in_collection = true
+  endif
+
+  assign show_mobile_slider = false
+  assign show_desktop_slider = false
 -%}
 
 <div
