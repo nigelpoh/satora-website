@@ -342,6 +342,10 @@
             });
             document.getElementById("ProductSubmitButton-Parent").addEventListener("click", () => {
               const productForm = document.querySelector('product-form');
+              const buttonToDisable = document.querySelector("#ProductSubmitButton-Parent");
+              const loadingToEnable = document.querySelector("#ProductSubmitButton-Parent > .loading__spinner")
+              buttonToDisable.classList.add("disabled")
+              loadingToEnable.classList.remove("hidden")
               if (productForm) {
                 productForm.querySelector('form').dispatchEvent(new Event('submit', { bubbles: true, cancelable: true }));
               }
