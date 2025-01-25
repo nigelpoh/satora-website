@@ -320,7 +320,7 @@
             
               window.addEventListener("scroll", () => {
                 const scrollPosition = window.scrollY || document.documentElement.scrollTop;
-                const viewportHeight = window.innerHeight;
+                const viewportHeight = window.innerHeight * 0.7;
             
                 if (scrollPosition > viewportHeight) {
                   hiddenElement.style.display = "block"
