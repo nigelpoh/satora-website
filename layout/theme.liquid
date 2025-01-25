@@ -341,8 +341,10 @@
               }
             });
             document.getElementById("ProductSubmitButton-Parent").addEventListener("click", () => {
+              console.log("Clicked", document.querySelector('#top_banner_input').value)
               const variantSelector = document.querySelector('[id^="variant-selects-"] select');
               if (variantSelector) {
+              console.log("Found")
                 fetch('/cart/add.js', {
                   method: 'POST',
                   headers: {
