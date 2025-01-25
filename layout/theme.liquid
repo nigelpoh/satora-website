@@ -323,11 +323,9 @@
                 const viewportHeight = window.innerHeight;
             
                 if (scrollPosition > viewportHeight) {
-                  hiddenElement.style.opacity = "1";
-                  hiddenElement.style.visibility = "visible";
+                  hiddenElement.style.display = "block"
                 } else {
-                  hiddenElement.style.opacity = "0";
-                  hiddenElement.style.visibility = "hidden";
+                  hiddenElement.style.display = "none"
                 }
               });
             });
