@@ -299,7 +299,7 @@
         document.documentElement.classList.add('shopify-design-mode');
       }
       document.addEventListener('DOMContentLoaded', function() {
-        const variantSelector = document.querySelector('id^="variant-selects-"] select');
+        const variantSelector = document.querySelector('[id^="variant-selects-"] select');
         console.log(variantSelector)
         if (variantSelector) {
           variantSelector.addEventListener('change', function(event) {
