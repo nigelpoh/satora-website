@@ -36,7 +36,7 @@
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
-        "color_scheme": "scheme-3",
+        "color_scheme": "scheme-2",
         "full_width": true,
         "padding_top": 24,
         "padding_bottom": 24
@@ -71,7 +71,7 @@
       "type": "main-collection-product-grid",
       "settings": {
         "products_per_page": 12,
-        "columns_desktop": 3,
+        "columns_desktop": 4,
         "color_scheme": "scheme-1",
         "image_ratio": "portrait",
         "image_shape": "default",
