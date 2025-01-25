@@ -342,22 +342,18 @@
             });
             document.getElementById("ProductSubmitButton-Parent").addEventListener("click", () => {
               console.log("Clicked", document.querySelector('#top_banner_input').value)
-              const variantSelector = document.querySelector('[id^="variant-selects-"] select');
-              if (variantSelector) {
-              console.log("Found")
-                fetch('/cart/add.js', {
-                  method: 'POST',
-                  headers: {
-                    'Content-Type': 'application/json',
-                  },
-                  body: JSON.stringify({
-                    quantity: 1,
-                    id: document.querySelector('#top_banner_input').value,
-                  }),
-                }).then(() => {
-                  
-                })
-              }
+              fetch('/cart/add.js', {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                  quantity: 1,
+                  id: document.querySelector('#top_banner_input').value,
+                }),
+              }).then(() => {
+                
+              })
             })
           });
         </script>
