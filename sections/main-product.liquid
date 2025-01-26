@@ -353,7 +353,7 @@
                         {{variation.metafields.custom[block.settings.metafield].value}}
                       </div>
                     {% else %}
-                      <a style = "padding: 0.75rem 3rem;border: 1px solid rgb(var(--color-foreground));color:rgb(var(--color-foreground));{% if forloop.index != forloop.length %}margin-right: 1rem;{% endif %}" href={{variation.url}}>          
+                      <a class = "rte" style = "padding: 0.75rem 3rem;border: 1px solid rgb(var(--color-foreground));color:rgb(var(--color-foreground));{% if forloop.index != forloop.length %}margin-right: 1rem;{% endif %}" href={{variation.url}}>          
                         {{variation.metafields.custom[block.settings.metafield].value}}
                       </a>
                     {% endif %}
