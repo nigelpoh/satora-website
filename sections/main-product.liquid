@@ -335,7 +335,7 @@
                 {% if block.settings.label != blank %}
                   <span class = "form__label" style = "margin-bottom: 0.5rem;">{{ block.settings.label }}</span>
                 {% endif %}
-                   {{ product.metafields.custom.collection.title }}
+               {{ product.title }}
                 {%- liquid 
                     assign variations = product | sort 
                     for prod in product.metafields.custom.collection.products
