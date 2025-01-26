@@ -166,30 +166,7 @@
           }
         </style>
         {% render 'product-media-gallery', variant_images: variant_images %}
-        <div class = "mobile-hidden">
-          {%- for block in section.blocks -%}
-            {%- case block.type -%}
-              {%- when 'related_products' -%}
-                {%- render 'related-products',
-                    id: block.id,
-                    section: section,
-                    color_scheme: block.settings.color_scheme,
-                    columns_desktop: block.settings.columns_desktop,
-                    columns_mobile: block.settings.columns_mobile,
-                    heading_size: block.settings.heading_size,
-                    heading: block.settings.heading,
-                    image_shape: block.settings.image_shape,
-                    image_ratio: block.settings.image_ratio,
-                    show_secondary_image: block.settings.show_secondary_image,
-                    show_vendor: block.settings.show_vendor,
-                    show_rating: block.settings.show_rating,
-                    products_to_show: block.settings.products_to_show,
-                    padding_top: block.settings.padding_top,
-                    padding_bottom: block.settings.padding_top
-                  -%}
-              {% endcase %}
-          {% endfor %}
-        </div>
+       
       </div>
       <div class="product__info-wrapper grid__item{% if settings.page_width > 1400 and section.settings.media_size == "small" %} product__info-wrapper--extra-padding{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
         <section
