@@ -1354,8 +1354,7 @@ a.product__text {
   .product-media-container.media-fit-cover,
   .product-media-container.media-fit-cover .product__modal-opener,
   .product-media-container.media-fit-cover .media {
-    /* height: 100%; */
-    width: 100%;
+    height: 100%;
   }
 
   .product-media-container.media-fit-cover .deferred-media__poster img {
