@@ -23,10 +23,12 @@
       "blocks": {
         "title": {
           "type": "title",
+          "disabled": true,
           "settings": {}
         },
         "rating_dqf3BG": {
           "type": "rating",
+          "disabled": true,
           "settings": {
             "padding_top": 8,
             "padding_bottom": 8,
@@ -35,10 +37,12 @@
         },
         "price": {
           "type": "price",
+          "disabled": true,
           "settings": {}
         },
         "metafield_selector_yhBMeq": {
           "type": "metafield_selector",
+          "disabled": true,
           "settings": {
             "metafield": "variation",
             "label": "Model",
@@ -48,6 +52,7 @@
         },
         "variant_picker": {
           "type": "variant_picker",
+          "disabled": true,
           "settings": {
             "label": "",
             "picker_type": "dropdown",
@@ -56,12 +61,14 @@
         },
         "design_swatches_Lazxkm": {
           "type": "design_swatches",
+          "disabled": true,
           "settings": {
             "label": "Design"
           }
         },
         "buy_buttons": {
           "type": "buy_buttons",
+          "disabled": true,
           "settings": {
             "show_dynamic_checkout": false,
             "show_gift_card_recipient": false
@@ -69,6 +76,7 @@
         },
         "collapsible_tab_df3Qdi": {
           "type": "collapsible_tab",
+          "disabled": true,
           "settings": {
             "heading": "Description",
             "icon": "none",
@@ -78,6 +86,7 @@
         },
         "collapsible_tab_Ecz7Yn": {
           "type": "collapsible_tab",
+          "disabled": true,
           "settings": {
             "heading": "Shipping",
             "icon": "none",
@@ -87,6 +96,7 @@
         },
         "collapsible_tab_EafzyU": {
           "type": "collapsible_tab",
+          "disabled": true,
           "settings": {
             "heading": "Up to 12 Months Warranty",
             "icon": "none",
@@ -96,6 +106,7 @@
         },
         "collapsible_tab_6mkL7q": {
           "type": "collapsible_tab",
+          "disabled": true,
           "settings": {
             "heading": "Buy 2 Get 1 Free Offer",
             "icon": "none",
@@ -105,6 +116,7 @@
         },
         "collapsible_tab_LdUrUL": {
           "type": "collapsible_tab",
+          "disabled": true,
           "settings": {
             "heading": "FAQ",
             "icon": "none",
@@ -114,6 +126,7 @@
         },
         "reviews_hrGTxx": {
           "type": "reviews",
+          "disabled": true,
           "settings": {
             "padding_top": 8,
             "padding_bottom": 8,
@@ -122,6 +135,7 @@
         },
         "grid_icons_j8n74m": {
           "type": "grid-icons",
+          "disabled": true,
           "settings": {
             "columns": 3,
             "features": [
@@ -136,6 +150,7 @@
         },
         "related_products_PCqaz7": {
           "type": "related_products",
+          "disabled": true,
           "settings": {
             "heading": "You May Also Like",
             "heading_size": "h2",
@@ -170,7 +185,6 @@
         "grid_icons_j8n74m",
         "related_products_PCqaz7"
       ],
-      "disabled": true,
       "settings": {
         "enable_sticky_info": true,
         "color_scheme": "scheme-1",
