@@ -165,12 +165,6 @@
             class = "product__column-sticky"
           {% endif %}
         >
-          <style>
-            .media > img {
-              object-fit: contain !important;
-            }
-          </style>
-          {% render 'product-media-gallery', variant_images: variant_images %}
           <div 
             class = "mobile-hidden">
             {%- for block in section.blocks -%}
