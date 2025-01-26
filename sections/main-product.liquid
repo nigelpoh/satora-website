@@ -347,6 +347,7 @@
                 -%}
   
                 <div style = "display:flex;">
+                  {{ variations.size }}
                   {% for variation in variations %}
                     {% if variation.id ==  product.id %}
                       <div style = "display:flex;justify-content:center;align-items:center;padding: 0.75rem 3rem;background-color:rgb(var(--color-foreground));color:rgb(var(--color-background));{% if forloop.index != forloop.length %}margin-right: 1rem;{% endif %}">
