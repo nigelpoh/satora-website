@@ -62,7 +62,7 @@
         "text_LfFmDN"
       ],
       "custom_css": [
-        "p {letter-spacing: 0; opacity: 1; color: rgba(var(--color-foreground), 1);}"
+        "p {opacity: 1; color: rgba(var(--color-foreground), 1);}"
       ],
       "settings": {
         "desktop_content_position": "center",
