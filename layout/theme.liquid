@@ -333,7 +333,92 @@
     {% sections 'header-group' %}
 
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
-      
+      {% if product != blank %}
+        <script>
+          document.addEventListener("DOMContentLoaded", () => {
+            const hiddenElement = document.getElementById("hidden-banner");
+            window.addEventListener("scroll", () => {
+              const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+              const viewportHeight = window.innerHeight * 0.7;
+          
+              if (scrollPosition > viewportHeight) {
+                hiddenElement.style.display = "flex"
+              } else {
+                hiddenElement.style.display = "none"
+              }
+            });
+            document.getElementById("ProductSubmitButton-Parent").addEventListener("click", () => {
+              const productForm = document.querySelector('product-form');
+              const buttonToDisable = document.querySelector("#ProductSubmitButton-Parent");
+              const loadingToEnable = document.querySelector("#ProductSubmitButton-Parent > .loading__spinner")
+              buttonToDisable.classList.add("disabled")
+              loadingToEnable.classList.remove("hidden")
+              if (productForm) {
+                
+                productForm.addEventListener('formSubmissionCompleted', (event) => {
+                  buttonToDisable.classList.remove("disabled")
+                  loadingToEnable.classList.add("hidden")
+                });
+
+                productForm.querySelector('form').dispatchEvent(new Event('submit', { bubbles: true, cancelable: true }));
+              }
+            })
+          });
+        </script>
+        <style>
+          @media screen and (min-width: 750px) {
+            #hidden-banner {
+              display: none !important;
+            }
+          }
+        </style>
+        <div id = "hidden-banner" style="display:none; flex-direction: row; justify-content: space-between; align-items: center; padding: 2em 2em 2em 0; border-bottom: 1px solid rgba(var(--color-foreground), 0.2); position: sticky; top: 0; left: 0; width: 100%; background-color: #FCFCFC; color: #103948; z-index:100">
+          <div style = "display: flex; align-items: center;">
+            <div style = "height: 7rem; width: 7rem;">
+                {{ product.featured_image | image_url: width: 400, height: 400| image_tag: style: "height: 7rem; width: 7rem;" }}
+            </div>
+            <div style = "display: flex; flex-direction: column">
+              <h3 style = "font-style: italic;margin:0;">{{ product.title | split: "]" | last | escape  }} - <span id = "variant-now">{{ product.selected_or_first_available_variant.title }}</span></h3>
+              <span>{{ product.price | money_with_currency }}</span>
+            </div>
+          </div>
+          <input
+            type="hidden"
+            name="id"
+            id = "top_banner_input"
+            value="{{ product.selected_or_first_available_variant.id }}"
+            {% if product.selected_or_first_available_variant.available == false
+              or product.selected_or_first_available_variant == null
+            %}
+              disabled
+            {% endif %}
+            class="product-variant-id"
+          />
+            <button
+            id="ProductSubmitButton-Parent"
+            type="submit"
+            name="add"
+            class="product-form__submit button button--primary"
+            {% if product.selected_or_first_available_variant.available == false
+              or product.selected_or_first_available_variant == null
+            %}
+              disabled
+            {% endif %}
+            style = "background-color:#BC5631;color:#FCFCFC; max-height:3rem;"
+          >
+            <span>
+              {%- if product.selected_or_first_available_variant == null -%}
+                {{ 'products.product.unavailable' | t }}
+              {%- elsif product.selected_or_first_available_variant.available == false -%}
+                {{ 'products.product.sold_out' | t }}
+              {%- else -%}
+                {{ 'products.product.add_to_cart' | t }}
+              {%- endif -%}
+            </span>
+            {%- render 'loading-spinner' -%}
+          </button>
+        </div>
+      {% endif %}
       {{ content_for_layout }}
     </main>
 
