@@ -26,7 +26,6 @@ class CartDrawer extends HTMLElement {
   }
 
   open(triggeredBy) {
-    console.log("OPEN")
     if (triggeredBy) this.setActiveElement(triggeredBy);
     const cartDrawerNote = this.querySelector('[id^="Details-"] summary');
     if (cartDrawerNote && !cartDrawerNote.hasAttribute('role')) this.setSummaryAccessibility(cartDrawerNote);
@@ -51,7 +50,6 @@ class CartDrawer extends HTMLElement {
   }
 
   close() {
-    console.log("CLOSE")
     this.classList.remove('active');
     removeTrapFocus(this.activeElement);
     document.body.classList.remove('overflow-hidden');
