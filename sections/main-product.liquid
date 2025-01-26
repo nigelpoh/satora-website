@@ -335,10 +335,9 @@
                 {% if block.settings.label != blank %}
                   <span class = "form__label" style = "margin-bottom: 0.5rem;">{{ block.settings.label }}</span>
                 {% endif %}
-               {{ product.metafields.custom.collection.value.title }}
                 {%- liquid 
                     assign variations = product | sort 
-                    for prod in product.metafields.custom.collection.products
+                    for prod in product.metafields.custom.collection.value.products
                         if prod.metafields.custom.short_name.value == product.metafields.custom.short_name.value and product.metafields.custom[block.settings.metafield].value != prod.metafields.custom[block.settings.metafield].value
                             assign new_variation = prod | sort
                             assign variations = variations | concat: new_variation
