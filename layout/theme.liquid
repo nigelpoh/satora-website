@@ -333,7 +333,7 @@
     {% sections 'header-group' %}
 
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
-      {% if product != blank %}
+      {% if product != blank and product.template_suffix != "reviews" %}
         <script>
           document.addEventListener("DOMContentLoaded", () => {
             const hiddenElement = document.getElementById("hidden-banner");
