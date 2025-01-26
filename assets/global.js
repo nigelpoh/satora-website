@@ -560,6 +560,7 @@ class HeaderDrawer extends MenuDrawer {
   }
 
   openMenuDrawer(summaryElement) {
+    console.log("OPEN")
     this.header = this.header || document.querySelector('.section-header');
     this.borderOffset =
       this.borderOffset || this.closest('.header-wrapper').classList.contains('header-wrapper--border-bottom') ? 1 : 0;
@@ -580,6 +581,7 @@ class HeaderDrawer extends MenuDrawer {
   }
 
   closeMenuDrawer(event, elementToFocus) {
+    console.log("CLOSE")
     if (!elementToFocus) return;
     super.closeMenuDrawer(event, elementToFocus);
     this.header.classList.remove('menu-open');
