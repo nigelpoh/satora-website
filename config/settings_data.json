@@ -13,7 +13,7 @@
     "logo_width": 100,
     "favicon": "shopify://shop_images/logo_mono.webp",
     "type_header_font": "alegreya_n4",
-    "heading_scale": 100,
+    "heading_scale": 120,
     "type_body_font": "bricolage_grotesque_n4",
     "body_scale": 100,
     "page_width": 1600,
@@ -405,7 +405,7 @@
     "custom_css": [
       ".button {min-height: calc(3.5rem + var(--buttons-border-width) * 2); padding: 0rem 1.5rem;}",
       ".field__label {top: calc(1.3rem + var(--inputs-border-width));}",
-      " /* For Chrome, Edge, and Safari */*::-webkit-scrollbar {-webkit-appearance: none; width: 5px; height: 5px; margin: 2rem 0;}",
+      "/* For Chrome, Edge, and Safari */*::-webkit-scrollbar {-webkit-appearance: none; width: 5px; height: 5px; margin: 2rem 0;}",
       "*::-webkit-scrollbar-track {background: #f2f0ef;}",
       "*::-webkit-scrollbar-thumb {background-color: #343231;}",
       " /* For Firefox */@supports not (selector(::-webkit-scrollbar)) {* {scrollbar-width: thin; scrollbar-color: #343231 #f2f0ef; }}",
