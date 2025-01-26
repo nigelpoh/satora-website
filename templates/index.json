@@ -253,7 +253,7 @@
           "type": "heading",
           "settings": {
             "heading": "Be First To Know",
-            "heading_size": "h2"
+            "heading_size": "h1"
           }
         },
         "paragraph_7LxK9E": {
@@ -272,10 +272,7 @@
         "paragraph_7LxK9E",
         "email_form_WrVB3f"
       ],
-      "custom_css": [
-        "p {font-size: 1.2rem;}",
-        "h2 {font-size: 2.5rem;}"
-      ],
+      "custom_css": [],
       "settings": {
         "color_scheme": "scheme-2",
         "full_width": true,
