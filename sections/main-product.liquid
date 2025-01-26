@@ -349,11 +349,11 @@
                 <div style = "display:flex;">
                   {% for variation in variations %}
                     {% if variation.id ==  product.id %}
-                      <div style = "display:flex;justify-content:center;align-items:center;padding: 0.75rem 3rem;background-color:rgb(var(--color-foreground));color:rgb(var(--color-background));font-size:1.2rem;{% if forloop.index != forloop.length %}margin-right: 1rem;{% endif %}">
+                      <div style = "display:flex;justify-content:center;align-items:center;padding: 0.75rem 3rem;background-color:rgb(var(--color-foreground));color:rgb(var(--color-background));{% if forloop.index != forloop.length %}margin-right: 1rem;{% endif %}">
                         {{variation.metafields.custom[block.settings.metafield].value}}
                       </div>
                     {% else %}
-                      <a style = "padding: 0.75rem 3rem;border: 1px solid rgb(var(--color-foreground));color:rgb(var(--color-foreground));font-size:1.2rem;{% if forloop.index != forloop.length %}margin-right: 1rem;{% endif %}" href={{variation.url}}>          
+                      <a style = "padding: 0.75rem 3rem;border: 1px solid rgb(var(--color-foreground));color:rgb(var(--color-foreground));{% if forloop.index != forloop.length %}margin-right: 1rem;{% endif %}" href={{variation.url}}>          
                         {{variation.metafields.custom[block.settings.metafield].value}}
                       </a>
                     {% endif %}
@@ -372,7 +372,7 @@
                       </div>
                       {{- 'icon-caret.svg' | inline_asset_content -}}
                     </summary>
-                    <div class="accordion__content rte" id="ProductAccordion-{{ block.id }}-{{ section.id }}" style = "font-size:1.2rem">
+                    <div class="accordion__content rte" id="ProductAccordion-{{ block.id }}-{{ section.id }}">
                       {{ block.settings.content }}
                       {{ block.settings.page.content }}
                     </div>
@@ -671,7 +671,7 @@
                           <path d="m12 17.27 4.15 2.51c.76.46 1.69-.22 1.49-1.08l-1.1-4.72 3.67-3.18c.67-.58.31-1.68-.57-1.75l-4.83-.41-1.89-4.46c-.34-.81-1.5-.81-1.84 0l-1.89 4.45-4.83.41c-.88.07-1.24 1.17-.57 1.75l3.67 3.18-1.1 4.72c-.2.86.73 1.54 1.49 1.08z"></path>                        
                         </svg>
                       {% endfor %}
-                      <a href="#ReviewSection" style="color:rgb(var(--color-foreground));margin-left:0.8rem;font-size:1.5rem;">
+                      <a href="#ReviewSection" style="color:rgb(var(--color-foreground));margin-left:0.8rem;">
                           {{ block.settings.product.metafields.ba_rev.review_data.reviews_count }} reviews
                       </a>
                     </div>
@@ -692,7 +692,7 @@
                               <path d="m12 17.27 4.15 2.51c.76.46 1.69-.22 1.49-1.08l-1.1-4.72 3.67-3.18c.67-.58.31-1.68-.57-1.75l-4.83-.41-1.89-4.46c-.34-.81-1.5-.81-1.84 0l-1.89 4.45-4.83.41c-.88.07-1.24 1.17-.57 1.75l3.67 3.18-1.1 4.72c-.2.86.73 1.54 1.49 1.08z"></path>                        
                             </svg>
                           {% endfor %}
-                          <span style="color:rgb(var(--color-foreground));margin-left:0.8rem;font-size:1.2rem;">
+                          <span style="color:rgb(var(--color-foreground));margin-left:0.8rem;">
                               {{ block.settings.product.metafields.ba_rev.review_data.reviews_count }} Reviews
                           </span>
                         </div>
@@ -705,8 +705,8 @@
                         {% for review in block.settings.product.metafields.ba_rev.review_data.reviews %}
                           <div style = "{% if forloop.index != forloop.length %}border-bottom: 1px solid rgba(var(--color-foreground), 0.2);{% endif %}padding: 1.5rem 0;">
                             <div style = "display:flex;justify-content:space-between;">
-                              <h4 style = "font-size:1.5rem;margin:0;">{{ review.author }}</h4>
-                              <p style = "font-size:1.2rem;margin:0;">{{ review.rated_at | date: "%d %b %Y" }}</p>
+                              <h4 style = "margin:0;">{{ review.author }}</h4>
+                              <p style = "margin:0;">{{ review.rated_at | date: "%d %b %Y" }}</p>
                             </div>
                             {% for i in (1..5) %}
                               {% assign benchmark = i | minus: 0.5 %}
@@ -714,8 +714,8 @@
                                 <path d="m12 17.27 4.15 2.51c.76.46 1.69-.22 1.49-1.08l-1.1-4.72 3.67-3.18c.67-.58.31-1.68-.57-1.75l-4.83-.41-1.89-4.46c-.34-.81-1.5-.81-1.84 0l-1.89 4.45-4.83.41c-.88.07-1.24 1.17-.57 1.75l3.67 3.18-1.1 4.72c-.2.86.73 1.54 1.49 1.08z"></path>                        
                               </svg>
                             {% endfor %}
-                            <h2 style = "font-size:2rem;margin:0;">{{ review.title }}</h2>
-                            <p style = "font-size:1.2rem;margin:0;">{{ review.body }}</p>
+                            <h2 style = "margin:0;">{{ review.title }}</h2>
+                            <p style = "margin:0;">{{ review.body }}</p>
                           </div>
                         {% endfor %}
                         <style>
@@ -734,7 +734,7 @@
                 			<a
                                 class = "parent-a"
                 				href="{{ block.settings.product.url }}"
-                				style="text-decoration: underline; text-decoration-style: wavy; margin-top: 1.5rem; display: inline-flex; width: fit-content; align-items: center; justify-content: center; border-radius: 1rem; border-width: 2px; padding: 0.5rem 1rem; font-size: 1.5rem; line-height: 2rem;">
+                				style="text-decoration: underline; text-decoration-style: wavy; margin-top: 1.5rem; display: inline-flex; width: fit-content; align-items: center; justify-content: center; border-radius: 1rem; border-width: 2px; padding: 0.5rem 1rem; line-height: 2rem;">
                 				<h4 style = "margin:0;margin-right:0.5rem;">See More</h4>
                 				<div class = "move" style = "width:1.5rem;">
                                   <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 44.1 25.5">
