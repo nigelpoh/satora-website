@@ -408,7 +408,8 @@
       " /* For Chrome, Edge, and Safari */*::-webkit-scrollbar {-webkit-appearance: none; width: 5px; height: 5px; margin: 2rem 0;}",
       "*::-webkit-scrollbar-track {background: #f2f0ef;}",
       "*::-webkit-scrollbar-thumb {background-color: #343231;}",
-      " /* For Firefox */@supports not (selector(::-webkit-scrollbar)) {* {scrollbar-width: thin; scrollbar-color: #343231 #f2f0ef; }}"
+      " /* For Firefox */@supports not (selector(::-webkit-scrollbar)) {* {scrollbar-width: thin; scrollbar-color: #343231 #f2f0ef; }}",
+      ":root {--font-body-scale: 0.85; --font-heading-scale: 0.85;}"
     ]
   }
 }
