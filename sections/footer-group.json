@@ -17,7 +17,7 @@
         "image_text_item_nbQbCn": {
           "type": "image_text_item",
           "settings": {
-            "image": "shopify://shop_images/shipping_0b708764-07c1-4df9-be30-b1b9af8d4218.svg",
+            "image": "shopify://shop_images/shipping.svg",
             "title": "Free Shipping Worldwide"
           }
         },
@@ -31,7 +31,7 @@
         "image_text_item_DPKCzV": {
           "type": "image_text_item",
           "settings": {
-            "image": "shopify://shop_images/returns_935b994f-26fb-40fd-b5ee-e2aeb29d5d2b.svg",
+            "image": "shopify://shop_images/returns.svg",
             "title": "60 Days Returns"
           }
         },
