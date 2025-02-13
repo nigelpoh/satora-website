@@ -15,11 +15,11 @@
         "slide-0": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/landscape_collection.webp",
+            "image": "shopify://shop_images/Artboard_2_5414e221-f2e5-4429-bc6c-7724980d4d86.png",
             "heading": "",
             "heading_size": "h2",
             "subheading": "",
-            "button_label": "SHOP LANDSCAPES",
+            "button_label": "SHOP NOW",
             "link": "shopify://collections/landscapes",
             "button_style_secondary": false,
             "box_align": "bottom-center",
