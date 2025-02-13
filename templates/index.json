@@ -139,6 +139,7 @@
       "block_order": [
         "heading"
       ],
+      "disabled": true,
       "settings": {
         "image": "shopify://shop_images/minimal_landing_shoot.webp",
         "height": "adapt",
@@ -179,7 +180,7 @@
         "button"
       ],
       "settings": {
-        "image": "shopify://shop_images/all_phones_landing_shoot.webp",
+        "image": "shopify://shop_images/Artboard_3.png",
         "height": "adapt",
         "desktop_image_width": "large",
         "layout": "image_first",
