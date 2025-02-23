@@ -8,7 +8,7 @@
     <link rel="canonical" href="{{ canonical_url }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital@1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&family=Climate+Crisis&display=swap" rel="stylesheet">
 
     {%- if settings.favicon != blank -%}
       <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
@@ -102,13 +102,15 @@
         background-color: rgb(var(--color-background));
       }
 
+      {% comment %}--font-body-family: {{ settings.type_body_font.family }}, {{ settings.type_body_font.fallback_families }};{% endcomment %}
+      {% comment %}--font-heading-family: {{ settings.type_header_font.family }}, {{ settings.type_header_font.fallback_families }};{% endcomment %}
       :root {
-        --font-body-family: {{ settings.type_body_font.family }}, {{ settings.type_body_font.fallback_families }};
+        --font-body-family: "Atkinson Hyperlegible Next", {{ settings.type_body_font.fallback_families }};
         --font-body-style: {{ settings.type_body_font.style }};
         --font-body-weight: {{ settings.type_body_font.weight }};
         --font-body-weight-bold: {{ settings.type_body_font.weight | plus: 300 | at_most: 1000 }};
 
-        --font-heading-family: {{ settings.type_header_font.family }}, {{ settings.type_header_font.fallback_families }};
+        --font-heading-family: "Climate Crisis", {{ settings.type_header_font.fallback_families }};
         --font-heading-style: {{ settings.type_header_font.style }};
         --font-heading-weight: {{ settings.type_header_font.weight }};
 
