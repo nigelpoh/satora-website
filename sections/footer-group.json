@@ -63,8 +63,8 @@
         "image_UPUKjL": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/logo_colour.webp",
-            "image_width": 70,
+            "image": "shopify://shop_images/primary_logo_colour_social.webp",
+            "image_width": 180,
             "alignment": "right"
           }
         },
