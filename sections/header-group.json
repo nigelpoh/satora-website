@@ -34,9 +34,9 @@
         "announcement_LeBJAb"
       ],
       "custom_css": [
-        "slideshow-component::-webkit-scrollbar, slideshow-component *::-webkit-scrollbar {height: 0rem;}",
-        "slideshow-component::-webkit-scrollbar, slideshow-component *::-webkit-scrollbar {background: transparent;}",
-        "slideshow-component::-webkit-scrollbar, slideshow-component *::-webkit-scrollbar {background-color: transparent;}",
+        "slideshow-component::-webkit-scrollbar,slideshow-component *::-webkit-scrollbar {height: 0rem;}",
+        "slideshow-component::-webkit-scrollbar,slideshow-component *::-webkit-scrollbar {background: transparent;}",
+        "slideshow-component::-webkit-scrollbar,slideshow-component *::-webkit-scrollbar {background-color: transparent;}",
         "@supports not (selector(::-webkit-scrollbar)) {slideshow-component::-webkit-scrollbar, slideshow-component *::-webkit-scrollbar {scrollbar-width: none; }}"
       ],
       "settings": {
@@ -52,7 +52,7 @@
     "header": {
       "type": "header",
       "settings": {
-        "logo_position": "top-center",
+        "logo_position": "middle-left",
         "menu": "main-menu",
         "menu_type_desktop": "dropdown",
         "sticky_header_type": "on-scroll-up",
@@ -70,7 +70,7 @@
     }
   },
   "order": [
-    "announcement-bar",
-    "header"
+    "header",
+    "announcement-bar"
   ]
 }
