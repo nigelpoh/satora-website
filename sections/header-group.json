@@ -59,7 +59,7 @@
         "@supports not (selector(::-webkit-scrollbar)) {slideshow-component::-webkit-scrollbar, slideshow-component *::-webkit-scrollbar {scrollbar-width: none; }}"
       ],
       "settings": {
-        "color_scheme": "scheme-3",
+        "color_scheme": "scheme-1",
         "show_line_separator": false,
         "show_social": false,
         "auto_rotate": true,
