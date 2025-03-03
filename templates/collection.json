@@ -42,7 +42,7 @@
     "image_banner_wMJkkc": {
       "type": "image-banner",
       "settings": {
-        "image": "shopify://shop_images/bestsellers_banner.webp",
+        "image": "{{ collection.image }}",
         "image_overlay_opacity": 0,
         "image_height": "small",
         "desktop_content_position": "middle-center",
