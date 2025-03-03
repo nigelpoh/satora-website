@@ -1,4 +1,57 @@
-
+{% style %}
+  .full-height {
+    display: flex;
+    flex-direction: column;
+  }
+  .tm_tracking_title {
+    display: none;
+  }
+  input::placeholder {
+    font-family: "Atkinson Hyperlegible Next", "system-ui";
+  }
+  .tm_tracking_span {
+    display: none !important;
+  }
+  .tm_tracking_form_in, .tm_tracking_form_order, .tm_tracking_parent, .tm_tracking_form_number, .tm_tracking_line_center, .tm_tracking_input {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  .tm_tracking_content > .tm_tracking_form_div > .tm_tracking_form_in > .tm_tracking_line_center > .tm_tracking_line {
+    height: 1em !important;
+  }
+  .tm_tracking_word {
+    padding: 1em 0em !important;
+  }
+  .tm_tracking_form > .tm_tracking_parent:not(:last-child) {
+    margin-bottom: 1em !important;
+  }
+  .tm_tracking_form_order {
+    height: auto !important;
+  }
+  .tm_tracking_form_div {
+    margin: 0em 10%;
+  }
+  .tm_tracking_button {
+    width: 100%;
+  } 
+  /* .tm_tracking_line {
+    margin: 0em 1em;
+  } */
+  button:not(.drawer__close) {
+    width: 100% !important;
+    margin-top: 2em;
+  }
+  .spinner-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 2em;
+  }
+  button {
+    color: #fffff2 !important;
+  }
+{% endstyle %}
 <script>
   function removeLoader() {
     var trackingContent = window.document.querySelector('.tm_main');
