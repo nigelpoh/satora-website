@@ -25,6 +25,37 @@
         "show_text_below": true
       }
     },
+    "rich_text_9fBt7H": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_ajFdTE": {
+          "type": "heading",
+          "settings": {
+            "heading": "Love Bubbles",
+            "heading_size": "h1"
+          }
+        },
+        "text_jkhBPh": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_ajFdTE",
+        "text_jkhBPh"
+      ],
+      "custom_css": [],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 32,
+        "padding_bottom": 0
+      }
+    },
     "product_collection_product_grid_P4NqV6": {
       "type": "product-collection-product-grid",
       "settings": {
@@ -90,6 +121,7 @@
   },
   "order": [
     "image_banner_wMJkkc",
+    "rich_text_9fBt7H",
     "product_collection_product_grid_P4NqV6",
     "image_with_text_78WwYE"
   ]
