@@ -160,7 +160,24 @@
                   {% endif %}
                 style = "border: 1px solid black;"
                 >
-                 TOP 1
+                <img
+                srcset="
+                  {%- if section.settings.top_image.width >= 165 -%}{{ section.settings.top_image | image_url: width: 165 }} 165w,{%- endif -%}
+                  {%- if section.settings.top_image.width >= 360 -%}{{ section.settings.top_image | image_url: width: 360 }} 360w,{%- endif -%}
+                  {%- if section.settings.top_image.width >= 533 -%}{{ section.settings.top_image | image_url: width: 533 }} 533w,{%- endif -%}
+                  {%- if section.settings.top_image.width >= 720 -%}{{ section.settings.top_image | image_url: width: 720 }} 720w,{%- endif -%}
+                  {%- if section.settings.top_image.width >= 940 -%}{{ section.settings.top_image | image_url: width: 940 }} 940w,{%- endif -%}
+                  {%- if section.settings.top_image.width >= 1066 -%}{{ section.settings.top_image | image_url: width: 1066 }} 1066w,{%- endif -%}
+                  {{ section.settings.top_image | image_url }} {{ section.settings.top_image.width }}w
+                "
+                src="{{ section.settings.top_image | image_url: width: 533 }}"
+                sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
+                alt="{{ section.settings.top_image.alt | escape }}"
+                class="motion-reduce"
+                loading="lazy"
+                width="{{ section.settings.top_image.width }}"
+                height="{{ section.settings.top_image.height }}"
+              >
               </li>
               {% assign skip_card_product_styles = false %}
               {%- for product in collection.products -%}
