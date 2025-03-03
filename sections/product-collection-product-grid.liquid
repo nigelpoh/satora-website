@@ -207,14 +207,14 @@
               <style>
                 .grid__item__large {
                   width: calc((25% - var(--grid-mobile-horizontal-spacing) * 3 / 4) * {{ mobile_left }});
-                  max-width: calc(50% - var(--grid-mobile-horizontal-spacing) / 2);
+                  max-width: calc((50% - var(--grid-mobile-horizontal-spacing) / 2) * {{ mobile_left }});
                   flex-grow: 1;
                   flex-shrink: 0;
                 }
                 @media screen and (min-width: 750px){
                     .grid__item__large {
                       width: calc((25% - var(--grid-desktop-horizontal-spacing) * 3 / 4) * {{ mobile_left }});
-                      max-width: calc(50% - var(--grid-desktop-horizontal-spacing) / 2);
+                      max-width: calc((50% - var(--grid-desktop-horizontal-spacing) / 2) * {{ mobile_left }});
                     }
                 }
                 @media screen and (min-width: 990px){
