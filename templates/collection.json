@@ -53,7 +53,7 @@
         "text_G9BkcM"
       ],
       "custom_css": [
-        "p {opacity: 1;}"
+        "p {opacity: 1; color: rgba(var(--color-foreground), 1);}"
       ],
       "settings": {
         "desktop_content_position": "center",
