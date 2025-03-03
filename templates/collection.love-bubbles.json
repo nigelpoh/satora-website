@@ -25,39 +25,6 @@
         "show_text_below": true
       }
     },
-    "rich_text_9fBt7H": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_ajFdTE": {
-          "type": "heading",
-          "settings": {
-            "heading": "Love Bubbles",
-            "heading_size": "h1"
-          }
-        },
-        "text_jkhBPh": {
-          "type": "text",
-          "settings": {
-            "text": "{{ collection.description }}"
-          }
-        }
-      },
-      "block_order": [
-        "heading_ajFdTE",
-        "text_jkhBPh"
-      ],
-      "custom_css": [
-        "h2 {font-family: \"Climate Crisis\", sans-serif; font-optical-sizing: auto; font-weight: 400; font-style: normal;}"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 32,
-        "padding_bottom": 0
-      }
-    },
     "product_collection_product_grid_P4NqV6": {
       "type": "product-collection-product-grid",
       "settings": {
@@ -123,7 +90,6 @@
   },
   "order": [
     "image_banner_wMJkkc",
-    "rich_text_9fBt7H",
     "product_collection_product_grid_P4NqV6",
     "image_with_text_78WwYE"
   ]
