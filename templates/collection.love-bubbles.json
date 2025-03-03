@@ -25,6 +25,31 @@
         "show_text_below": true
       }
     },
+    "rich_text_6j3bAE": {
+      "type": "rich-text",
+      "blocks": {
+        "text_RiP3bF": {
+          "type": "text",
+          "settings": {
+            "text": "<p>See what you like? Shop Now: 4 Phone Cases for the price of 2, No Code Required</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_RiP3bF"
+      ],
+      "custom_css": [
+        "p {opacity: 1; color: rgba(var(--color-foreground), 1);}"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "product_collection_product_grid_P4NqV6": {
       "type": "product-collection-product-grid",
       "settings": {
@@ -71,7 +96,7 @@
         "text_tBXJQF"
       ],
       "custom_css": [
-        "h2 {}"
+        "h2 {font-weight: 600;}"
       ],
       "settings": {
         "image": "shopify://shop_images/Love_Bubbles_Item.webp",
@@ -93,6 +118,7 @@
   },
   "order": [
     "image_banner_wMJkkc",
+    "rich_text_6j3bAE",
     "product_collection_product_grid_P4NqV6",
     "image_with_text_78WwYE"
   ]
