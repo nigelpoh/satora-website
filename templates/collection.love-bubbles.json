@@ -70,6 +70,9 @@
         "heading_Tzez4N",
         "text_tBXJQF"
       ],
+      "custom_css": [
+        "h2 {}"
+      ],
       "settings": {
         "image": "shopify://shop_images/Love_Bubbles_Item.webp",
         "height": "adapt",
