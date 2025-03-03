@@ -46,7 +46,9 @@
         "heading_ajFdTE",
         "text_jkhBPh"
       ],
-      "custom_css": [],
+      "custom_css": [
+        "h2 {font-family: \"Climate Crisis\", sans-serif; font-optical-sizing: auto; font-weight: 400; font-style: normal;}"
+      ],
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
