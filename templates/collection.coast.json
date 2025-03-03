@@ -61,7 +61,7 @@
         "text_UGrjzk": {
           "type": "text",
           "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text": "{{ collection.description }}",
             "text_style": "body"
           }
         }
@@ -71,7 +71,7 @@
         "text_UGrjzk"
       ],
       "custom_css": [
-        "h2 {font-weight:600;}"
+        "h2 {font-weight: 600;}"
       ],
       "settings": {
         "height": "adapt",
