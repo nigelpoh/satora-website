@@ -205,11 +205,11 @@
                 {% assign mobile_left = mobile_left | abs %}
               {% endif %}
               <style>
-                @media screen and (min-width: 990px){
-                  .grid__item__large {
-                    width: calc(25% - var(--grid-desktop-horizontal-spacing) * 3 / 4);
-                    max-width: calc(25% - var(--grid-desktop-horizontal-spacing) * 3 / 4);
-                  }
+                .grid__item__large {
+                  width: calc(25% - var(--grid-mobile-horizontal-spacing) * 3 / 4);
+                  max-width: calc(50% - var(--grid-mobile-horizontal-spacing) / 2);
+                  flex-grow: 1;
+                  flex-shrink: 0;
                 }
                 @media screen and (min-width: 750px){
                     .grid__item__large {
@@ -217,11 +217,11 @@
                       max-width: calc(50% - var(--grid-desktop-horizontal-spacing) / 2);
                     }
                 }
-                .grid__item__large {
-                  width: calc(25% - var(--grid-mobile-horizontal-spacing) * 3 / 4);
-                  max-width: calc(50% - var(--grid-mobile-horizontal-spacing) / 2);
-                  flex-grow: 1;
-                  flex-shrink: 0;
+                @media screen and (min-width: 990px){
+                  .grid__item__large {
+                    width: calc(25% - var(--grid-desktop-horizontal-spacing) * 3 / 4);
+                    max-width: calc(25% - var(--grid-desktop-horizontal-spacing) * 3 / 4);
+                  }
                 }
               </style>
               <li
