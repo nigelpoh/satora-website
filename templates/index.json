@@ -12,7 +12,7 @@
     "image_banner_tg6RxL": {
       "type": "image-banner",
       "settings": {
-        "image": "shopify://shop_images/bestsellers_banner.webp",
+        "image": "shopify://shop_images/Home_Page_Shortened.webp",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "desktop_content_position": "middle-center",
