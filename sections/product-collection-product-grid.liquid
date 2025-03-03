@@ -191,6 +191,7 @@
                     data-cascade
                     style="--animation-order: {{ forloop.index | plus: 1 }};"
                   {% endif %}
+                  {% if forloop.index == forloop.length %}id = "product-phone-end"{% endif %}
                 >
                   {% render 'card-product',
                     card_product: product,
@@ -262,12 +263,10 @@
               <script>
                 function adjustGridItemLargeHeight() {
                   const gridItemLarge = document.querySelector('.grid__item__large');
-                  const gridItems = document.querySelectorAll('.grid__item');
+                  const gridItemLast = document.getElementById('product-phone-end');
                   
-                  if (gridItemLarge && gridItems.length > 0) {
-                    const lastGridItem = gridItems[gridItems.length - 1];
-                    const refHeight = lastGridItem.offsetHeight;
-                    console.log(lastGridItem)
+                  if (gridItemLarge && gridItemLast) {
+                    const refHeight = gridItemLast.offsetHeight;
                     gridItemLarge.style.height = refHeight;
                   }
                 }
