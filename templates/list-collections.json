@@ -23,22 +23,22 @@
     "collection_list_Cy8Wf4": {
       "type": "collection-list",
       "blocks": {
-        "featured_collection_fmQrCw": {
+        "featured_collection_6JHdrE": {
           "type": "featured_collection",
           "settings": {
-            "collection": "landscapes"
+            "collection": "love-bubbles"
           }
         },
-        "featured_collection_gfCzE4": {
+        "featured_collection_XdgzNn": {
           "type": "featured_collection",
           "settings": {
-            "collection": "all"
+            "collection": "j"
           }
         }
       },
       "block_order": [
-        "featured_collection_fmQrCw",
-        "featured_collection_gfCzE4"
+        "featured_collection_6JHdrE",
+        "featured_collection_XdgzNn"
       ],
       "settings": {
         "title": "Collections",
