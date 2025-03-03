@@ -259,6 +259,18 @@
                   }
                 }
               </style>
+              <script>
+                function adjustGridItemLargeHeight() {
+                  const gridItemLarge = document.querySelector('.grid-item-large');
+                  const referenceItem = gridItemLarge?.previousElementSibling;
+                  if (gridItemLarge && referenceItem) {
+                    const refHeight = window.getComputedStyle(referenceItem).height;
+                    gridItemLarge.style.height = refHeight;
+                  }
+                }
+                document.addEventListener('DOMContentLoaded', adjustGridItemLargeHeight);
+                window.addEventListener('resize', adjustGridItemLargeHeight);
+              </script>
               <li
                 class="grid__item__large{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
                 {% if settings.animations_reveal_on_scroll %}
