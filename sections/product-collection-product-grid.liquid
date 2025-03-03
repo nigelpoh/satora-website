@@ -264,9 +264,9 @@
                   const gridItemLarge = document.querySelector('.grid__item__large');
                   const gridItemLast = document.getElementById('product-phone-end');
                   if (gridItemLarge && gridItemLast) {
+                    gridItemLarge.style.height = 0;
                     const refHeight = gridItemLast.offsetHeight;
-                    console.log("Height", refHeight)
-                    gridItemLarge.style.height = refHeight;
+                    gridItemLarge.style.height = refHeight + "px";
                   }
                 }
               
