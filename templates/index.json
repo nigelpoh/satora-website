@@ -52,6 +52,9 @@
     },
     "featured_collection_Kh4YeP": {
       "type": "featured-collection",
+      "custom_css": [
+        ".collection__view-all {margin-top: 1rem;}"
+      ],
       "settings": {
         "title": "",
         "heading_size": "h1",
