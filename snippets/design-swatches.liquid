@@ -2,9 +2,9 @@
     assign variation_required = product.metafields.custom.variation.value
     assign products_all = product.metafields.custom.collection.value.products | sort: "title"
     assign products = product | sort
-    assign titles = product.metafields.custom.short_name.value | sort
+    assign titles = product.title | sort
     for prod in products_all
-        unless titles contains prod.metafields.custom.short_name.value
+        unless titles contains prod.title
             if prod.metafields.custom.variation.value == variation_required
                 assign prd = prod | sort
                 assign title = prod.metafields.custom.variation.value | sort
@@ -19,7 +19,6 @@
     {% for prod in products %}
       <div {% if forloop.last == false %}style = "margin-right:1rem"{% endif %}>
         {% if prod.metafields.custom.thumbnail.value != blank %}
-          {{ prod.id }} == {{ product.id }}
             {% if prod.id == product.id %}
               <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align:center;">
                 <div style= "height: 9rem; width: 9rem; border: 1px solid rgb(var(--color-foreground));overflow:hidden;">
