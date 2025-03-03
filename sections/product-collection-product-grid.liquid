@@ -36,20 +36,6 @@
   }
 {%- endstyle -%}
 
-<script>
-  function adjustGridItemLargeHeight() {
-    const gridItemLarge = document.querySelector('.grid__item__large');
-    const referenceItem = gridItemLarge?.previousElementSibling;
-    console.log(referenceItem)
-    if (gridItemLarge && referenceItem) {
-      const refHeight = window.getComputedStyle(referenceItem).height;
-      gridItemLarge.style.height = refHeight;
-    }
-  }
-  document.addEventListener('DOMContentLoaded', adjustGridItemLargeHeight);
-  window.addEventListener('resize', adjustGridItemLargeHeight);
-</script>
-
 <div class="section-{{ section.id }}-padding gradient color-{{ section.settings.color_scheme }}">
   {%- paginate collection.products by section.settings.products_per_page -%}
     {% comment %} Sort is the first tabbable element when filter type is vertical {% endcomment %}
@@ -273,6 +259,21 @@
                   }
                 }
               </style>
+              <script>
+                function adjustGridItemLargeHeight() {
+                  const gridItemLarge = document.querySelector('.grid__item__large');
+                  const gridItems = document.querySelectorAll('.grid__item');
+                  
+                  if (gridItemLarge && gridItems.length > 0) {
+                    const lastGridItem = gridItems[gridItems.length - 1];
+                    const refHeight = window.getComputedStyle(lastGridItem).height;
+                    gridItemLarge.style.height = refHeight;
+                  }
+                }
+              
+                document.addEventListener('DOMContentLoaded', adjustGridItemLargeHeight);
+                window.addEventListener('resize', adjustGridItemLargeHeight);
+              </script>
               <li
                 class="grid__item__large{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
                 {% if settings.animations_reveal_on_scroll %}
