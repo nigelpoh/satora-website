@@ -25,45 +25,6 @@
         "show_text_below": true
       }
     },
-    "slideshow": {
-      "type": "slideshow",
-      "blocks": {
-        "slide-0": {
-          "type": "slide",
-          "settings": {
-            "heading": "",
-            "heading_size": "h2",
-            "subheading": "",
-            "button_label": "",
-            "link": "shopify://collections/landscapes",
-            "button_style_secondary": false,
-            "box_align": "bottom-center",
-            "show_text_box": false,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "scheme-3",
-            "text_alignment_mobile": "center"
-          }
-        }
-      },
-      "block_order": [
-        "slide-0"
-      ],
-      "disabled": true,
-      "custom_css": [
-        ".banner__content.banner__content--bottom-center {align-items: flex-end;}"
-      ],
-      "settings": {
-        "layout": "full_bleed",
-        "slide_height": "large",
-        "slider_visual": "dots",
-        "auto_rotate": true,
-        "change_slides_speed": 5,
-        "image_behavior": "none",
-        "show_text_below": false,
-        "accessibility_info": "Slideshow about our brand."
-      }
-    },
     "rich_text_wH8hHh": {
       "type": "rich-text",
       "blocks": {
@@ -87,30 +48,6 @@
         "full_width": true,
         "padding_top": 12,
         "padding_bottom": 12
-      }
-    },
-    "rich-text-1": {
-      "type": "rich-text",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Explore Our Newest Releases",
-            "heading_size": "h1"
-          }
-        }
-      },
-      "block_order": [
-        "heading"
-      ],
-      "custom_css": [],
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "scheme-1",
-        "full_width": false,
-        "padding_top": 64,
-        "padding_bottom": 40
       }
     },
     "featured_collection_aAXpnJ": {
@@ -141,98 +78,19 @@
         "padding_bottom": 36
       }
     },
-    "image-with-text": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Carry Imagination and Turn Heads Wherever You Go.",
-            "heading_size": "h1"
-          }
-        }
-      },
-      "block_order": [
-        "heading"
-      ],
-      "disabled": true,
+    "image_banner_MDayY3": {
+      "type": "image-banner",
       "settings": {
-        "image": "shopify://shop_images/minimal_landing_shoot.webp",
-        "height": "adapt",
-        "desktop_image_width": "small",
-        "layout": "text_first",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "section_color_scheme": "scheme-1",
-        "color_scheme": "scheme-5",
-        "image_behavior": "none",
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 0
-      }
-    },
-    "image-with-text-1": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Explore our Phone Case Collections",
-            "heading_size": "h2"
-          }
-        },
-        "button": {
-          "type": "button",
-          "settings": {
-            "button_label": "View All",
-            "button_link": "shopify://collections/all",
-            "button_style_secondary": false
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "button"
-      ],
-      "settings": {
-        "image": "shopify://shop_images/Artboard_3.png",
-        "height": "adapt",
-        "desktop_image_width": "large",
-        "layout": "image_first",
-        "desktop_content_position": "bottom",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "section_color_scheme": "scheme-1",
-        "color_scheme": "scheme-5",
-        "image_behavior": "none",
-        "mobile_content_alignment": "left",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "rich_text_P8afTt": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_QKAyFN": {
-          "type": "heading",
-          "settings": {
-            "heading": "Explore Our Bestsellers",
-            "heading_size": "h1"
-          }
-        }
-      },
-      "block_order": [
-        "heading_QKAyFN"
-      ],
-      "custom_css": [],
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
         "color_scheme": "",
-        "full_width": true,
-        "padding_top": 52,
-        "padding_bottom": 40
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
       }
     },
     "featured_collection_Ui9Wkn": {
@@ -260,6 +118,49 @@
         "columns_mobile": "2",
         "swipe_on_mobile": true,
         "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
+    "image_banner_HtxVgb": {
+      "type": "image-banner",
+      "settings": {
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "featured_collection_xzbUwY": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "j",
+        "products_to_show": 10,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
         "padding_bottom": 36
       }
     },
@@ -300,14 +201,12 @@
   },
   "order": [
     "image_banner_tg6RxL",
-    "slideshow",
     "rich_text_wH8hHh",
-    "rich-text-1",
     "featured_collection_aAXpnJ",
-    "image-with-text",
-    "image-with-text-1",
-    "rich_text_P8afTt",
+    "image_banner_MDayY3",
     "featured_collection_Ui9Wkn",
+    "image_banner_HtxVgb",
+    "featured_collection_xzbUwY",
     "newsletter_Q8GCbe"
   ]
 }
