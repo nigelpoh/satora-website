@@ -15,7 +15,7 @@
         "heading_ebRreh": {
           "type": "heading",
           "settings": {
-            "heading": "<em>Track Your Order</em>",
+            "heading": "<strong>Track Your Order</strong>",
             "heading_size": "h1"
           }
         },
