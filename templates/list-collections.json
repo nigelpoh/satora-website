@@ -44,7 +44,7 @@
         ".title-wrapper-with-link {display: flex; justify-content: center;}"
       ],
       "settings": {
-        "title": "Browse Our Collections",
+        "title": "<strong>Browse Our Collections</strong>",
         "heading_size": "h1",
         "image_ratio": "square",
         "columns_desktop": 3,
