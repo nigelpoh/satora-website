@@ -41,7 +41,7 @@
         "featured_collection_XdgzNn"
       ],
       "custom_css": [
-        "h2 {text-align: center;}"
+        ".title-wrapper-with-link {display: flex; justify-content: center;}"
       ],
       "settings": {
         "title": "Browse Our Collections",
