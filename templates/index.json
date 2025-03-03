@@ -84,7 +84,7 @@
     "image_banner_MDayY3": {
       "type": "image-banner",
       "settings": {
-        "image": "shopify://shop_images/Love_Bubbles_Worded_Filtered.png",
+        "image": "shopify://shop_images/Love_Bubbles_Worded_Filtered_Shortened.png",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "desktop_content_position": "middle-center",
