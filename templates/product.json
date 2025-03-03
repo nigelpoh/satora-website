@@ -39,6 +39,7 @@
         },
         "metafield_selector_yhBMeq": {
           "type": "metafield_selector",
+          "disabled": true,
           "settings": {
             "metafield": "variation",
             "label": "Model",
@@ -49,7 +50,7 @@
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
-            "label": "",
+            "label": "Model",
             "picker_type": "dropdown",
             "swatch_shape": "circle"
           }
