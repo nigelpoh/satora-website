@@ -54,7 +54,7 @@
         "heading_7inq3J": {
           "type": "heading",
           "settings": {
-            "heading": "Image with text",
+            "heading": "<strong>{{ collection.title }}</strong>",
             "heading_size": "h1"
           }
         },
@@ -69,6 +69,9 @@
       "block_order": [
         "heading_7inq3J",
         "text_UGrjzk"
+      ],
+      "custom_css": [
+        "h2 {font-weight:600;}"
       ],
       "settings": {
         "height": "adapt",
