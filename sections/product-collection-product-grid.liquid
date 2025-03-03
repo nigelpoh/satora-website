@@ -267,6 +267,7 @@
                   if (gridItemLarge && gridItems.length > 0) {
                     const lastGridItem = gridItems[gridItems.length - 1];
                     const refHeight = window.getComputedStyle(lastGridItem).height;
+                    console.log(refHeight)
                     gridItemLarge.style.height = refHeight;
                   }
                 }
