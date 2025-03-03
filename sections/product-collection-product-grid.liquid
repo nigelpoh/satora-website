@@ -156,7 +156,7 @@
                   class="grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
                   {% if settings.animations_reveal_on_scroll %}
                     data-cascade
-                    style="--animation-order: 0;"
+                    style="--animation-order: 1;"
                   {% endif %}
                 >
                  TOP 1
@@ -189,6 +189,15 @@
                 </li>
                 {%- assign skip_card_product_styles = true -%}
               {%- endfor -%}
+              <li
+                class="grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                {% if settings.animations_reveal_on_scroll %}
+                  data-cascade
+                  style="--animation-order: {{ collection.products.size | plus: 1 }};"
+                {% endif %}
+              >
+               TOP 1
+            </li>
             </ul>
 
             {%- if paginate.pages > 1 -%}
