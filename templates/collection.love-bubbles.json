@@ -64,20 +64,11 @@
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "text_style": "body"
           }
-        },
-        "button_eyxN4L": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false
-          }
         }
       },
       "block_order": [
         "heading_Tzez4N",
-        "text_tBXJQF",
-        "button_eyxN4L"
+        "text_tBXJQF"
       ],
       "settings": {
         "height": "adapt",
