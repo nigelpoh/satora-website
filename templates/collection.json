@@ -52,13 +52,16 @@
       "block_order": [
         "text_G9BkcM"
       ],
+      "custom_css": [
+        "p {opacity: 1;}"
+      ],
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
-        "color_scheme": "",
+        "color_scheme": "scheme-2",
         "full_width": true,
-        "padding_top": 0,
-        "padding_bottom": 0
+        "padding_top": 12,
+        "padding_bottom": 12
       }
     },
     "product-grid": {
