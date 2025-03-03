@@ -190,8 +190,44 @@
                 </li>
                 {%- assign skip_card_product_styles = true -%}
               {%- endfor -%}
+              {% assign desktop_left = collection.products.size | minus: 3 %}
+              {% if desktop_left > 0 %}
+                {% assign last_row_count = desktop_left | modulo: 4 %}
+                {% assign desktop_left = 4 | minus: last_row_count %}
+              {% else %}
+                {% assign desktop_left = desktop_left | abs %}
+              {% endif %}
+              {% assign mobile_left = collection.products.size | minus: 1 %}
+              {% if mobile_left > 0 %}
+                {% assign last_row_count = mobile_left | modulo: 2 %}
+                {% assign mobile_left = 2 | minus: last_row_count %}
+              {% else %}
+                {% assign mobile_left = mobile_left | abs %}
+              {% endif %}
+              {{ desktop_left }}
+              {{ mobile_left }}
+              <style>
+                @media screen and (min-width: 990px){
+                  .grid__item__large {
+                    width: calc(25% - var(--grid-desktop-horizontal-spacing) * 3 / 4);
+                    max-width: calc(25% - var(--grid-desktop-horizontal-spacing) * 3 / 4);
+                  }
+                }
+                @media screen and (min-width: 750px){
+                    .grid__item__large {
+                      width: calc(25% - var(--grid-desktop-horizontal-spacing) * 3 / 4);
+                      max-width: calc(50% - var(--grid-desktop-horizontal-spacing) / 2);
+                    }
+                }
+                .grid__item__large {
+                  width: calc(25% - var(--grid-mobile-horizontal-spacing) * 3 / 4);
+                  max-width: calc(50% - var(--grid-mobile-horizontal-spacing) / 2);
+                  flex-grow: 1;
+                  flex-shrink: 0;
+                }
+              </style>
               <li
-                class="grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                class="grid__item__large{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
                 {% if settings.animations_reveal_on_scroll %}
                   data-cascade
                   style="--animation-order: {{ collection.products.size | plus: 1 }};"
