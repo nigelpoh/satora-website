@@ -44,10 +44,10 @@
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
-        "color_scheme": "",
+        "color_scheme": "scheme-2",
         "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
+        "padding_top": 12,
+        "padding_bottom": 12
       }
     },
     "product_collection_product_grid_P4NqV6": {
