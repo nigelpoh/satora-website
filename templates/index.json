@@ -128,7 +128,7 @@
     "image_banner_HtxVgb": {
       "type": "image-banner",
       "settings": {
-        "image": "shopify://shop_images/Coast.webp",
+        "image": "shopify://shop_images/Coast_Worded_Filtered_Shortened.webp",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "desktop_content_position": "middle-center",
