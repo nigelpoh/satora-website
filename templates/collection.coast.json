@@ -25,6 +25,28 @@
         "show_text_below": true
       }
     },
+    "rich_text_NWATAg": {
+      "type": "rich-text",
+      "blocks": {
+        "text_wA79gj": {
+          "type": "text",
+          "settings": {
+            "text": "<p>See what you like? Shop Now: 4 Phone Cases for the Price of 2, No Code Required</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_wA79gj"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-2",
+        "full_width": true,
+        "padding_top": 12,
+        "padding_bottom": 12
+      }
+    },
     "product_collection_product_grid_P4NqV6": {
       "type": "product-collection-product-grid",
       "settings": {
@@ -93,6 +115,7 @@
   },
   "order": [
     "image_banner_wMJkkc",
+    "rich_text_NWATAg",
     "product_collection_product_grid_P4NqV6",
     "image_with_text_78WwYE"
   ]
