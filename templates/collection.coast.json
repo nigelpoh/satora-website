@@ -38,6 +38,9 @@
       "block_order": [
         "text_wA79gj"
       ],
+      "custom_css": [
+        "p {opacity: 1; color: rgba(var(--color-foreground), 1);}"
+      ],
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
