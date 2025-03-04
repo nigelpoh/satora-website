@@ -23,7 +23,7 @@
         "slide_nA9JHQ": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/Home_Page_Shortened_0d3013c7-7868-4218-8a88-fdf944463a6e.webp",
+            "image": "shopify://shop_images/About_Us_Shortened.png",
             "heading": "",
             "heading_size": "h2",
             "subheading": "",
@@ -66,7 +66,7 @@
         "text_CLcp6y": {
           "type": "text",
           "settings": {
-            "text": "{{ page.content }}"
+            "text": "<p>{{ page.content }}</p>"
           }
         }
       },
