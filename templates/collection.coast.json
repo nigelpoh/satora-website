@@ -12,7 +12,7 @@
     "image_banner_wMJkkc": {
       "type": "image-banner",
       "settings": {
-        "image": "{{ collection.image }}",
+        "image": "shopify://shop_images/Coast_Shortened_5562f366-8532-404a-a11d-4aa4ff31bda1.webp",
         "image_overlay_opacity": 0,
         "image_height": "medium",
         "desktop_content_position": "middle-center",
