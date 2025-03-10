@@ -159,6 +159,11 @@
         "type": "shopify://apps/elevar-conversion-tracking/blocks/dataLayerEmbed/bc30ab68-b15c-4311-811f-8ef485877ad6",
         "disabled": true,
         "settings": {}
+      },
+      "10974556588217313781": {
+        "type": "shopify://apps/nabu-for-fb-pixel/blocks/script-block/692d25a0-75b7-4cff-b3eb-8f1d8e1670bf",
+        "disabled": false,
+        "settings": {}
       }
     },
     "color_schemes": {
