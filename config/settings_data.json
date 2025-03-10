@@ -160,8 +160,8 @@
         "disabled": true,
         "settings": {}
       },
-      "10974556588217313781": {
-        "type": "shopify://apps/nabu-for-fb-pixel/blocks/script-block/692d25a0-75b7-4cff-b3eb-8f1d8e1670bf",
+      "11365860122446792492": {
+        "type": "shopify://apps/a-facebook-pixels/blocks/app-embed-block/55e34c08-5add-41cc-b0cd-5e853bb58fdb",
         "disabled": false,
         "settings": {}
       }
